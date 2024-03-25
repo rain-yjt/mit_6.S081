@@ -11,7 +11,7 @@ int main(int argc,char *argv[]){
 
     if(pipe(pfd) < 0 || pipe(cfd) < 0){
         fprintf(2,"pipe error.\n");
-        exit(1);
+        exit(-1);
     }
 
     if((pid = fork()) < 0){
