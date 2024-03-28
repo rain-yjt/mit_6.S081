@@ -47,7 +47,6 @@ void sieve(int pipe_read){
         //child
         close(pi[WRITE]);
         sieve(pi[READ]);
-        //close(pi[READ]);
     }
 
 }
