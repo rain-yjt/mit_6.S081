@@ -3,6 +3,7 @@
         "stat.h": "c",
         "fs.h": "c",
         "user.h": "c",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "types.h": "c"
     }
 }

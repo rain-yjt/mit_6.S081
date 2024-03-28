@@ -194,7 +194,8 @@ UPROGS=\
 	$U/_find\
 	$U/_xargs\
 	$U/_xargs2\
-	
+	$U/_primes2\
+
 ifeq ($(LAB),$(filter $(LAB), lock))
 UPROGS += \
 	$U/_stats
