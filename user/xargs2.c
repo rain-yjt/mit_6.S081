@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         if(buf[i] == '\n'){
             int pid = fork();
             if(pid < 0){
-                fprintf(2,"fork errot\n");
+                fprintf(2,"fork error\n");
                 exit(0);
             }else if(pid > 0){
                 //parent
