@@ -41,12 +41,13 @@ void sieve(int pipe_read){
         close(pi[READ]);
         write(pi[WRITE],buf,MAXSIZE);
         wait(0);
-        close(pi[WRITE]);
         close(pipe_read);
+        close(pi[WRITE]);
     }else{
         //child
         close(pi[WRITE]);
         sieve(pi[READ]);
+        //close(pi[READ]);
     }
 
 }
@@ -74,13 +75,12 @@ int main(int argc,char *argv[]){
         buf[1] = ZERO; 
         write(fd[WRITE],buf,MAXSIZE);
         close(fd[WRITE]);
-        
+        wait(0);
     }else{
         //child
         close(fd[WRITE]);
         sieve(fd[READ]);
     }
-    wait(0);
     exit(0);
 
 }
